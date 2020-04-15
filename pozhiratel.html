@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body{
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Monitor"><img src="https://i.kym-cdn.com/photos/images/facebook/000/973/508/c8a.png"></div>
+        <button onclick="start()">Start</button>
+        <script type="text/javascript">
+            var monitor = document.getElementById('Monitor');
+            var sentinel = 0;
+            
+            function start(){
+                upndown();
+            }
+            
+            function upndown(){
+                console.log('lol')
+                if(sentinel == 0){
+                    monitor.innerHTML ='это пожиратель миров' + '</br>' + '<img src="https://i.kym-cdn.com/photos/images/facebook/000/973/508/c8a.png">';
+                    sentinel++;
+                    console.log(sentinel);
+                    setTimeout(start, 3000);
+                }else{
+                    monitor.innerHTML = 'он лох пидор' + '</br>' + '<img src="https://i.kym-cdn.com/photos/images/facebook/000/973/508/c8a.png">';
+                    sentinel--;
+                    console.log(sentinel);
+                    setTimeout(start, 3000);
+                }
+            }
+        </script>
+    </body>
+</html>
